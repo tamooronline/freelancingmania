@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancing Mania - Courses</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Freelancing Mania</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="book.html">Book Store</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Our Courses</h2>
+        
+        <section id="digital-marketing">
+            <h3>Digital Marketing</h3>
+            <p>Learn SEO, social media marketing, email marketing, and more. Price: PKR 5000</p>
+            <button onclick="addToCart({name: 'Digital Marketing Course', price: 5000})">Add to Cart</button>
+        </section>
+        
+        <section id="youtube-automation">
+            <h3>YouTube Automation</h3>
+            <p>Automate your YouTube channel with tools and strategies. Price: PKR 4000</p>
+            <button onclick="addToCart({name: 'YouTube Automation Course', price: 4000})">Add to Cart</button>
+        </section>
+        
+        <section id="video-editing">
+            <h3>Video Editing</h3>
+            <p>Master video editing with professional software. Price: PKR 6000</p>
+            <button onclick="addToCart({name: 'Video Editing Course', price: 6000})">Add to Cart</button>
+        </section>
+        
+        <section id="content-writing">
+            <h3>Content Writing</h3>
+            <p>Write engaging content for blogs, websites, and more. Price: PKR 3000</p>
+            <button onclick="addToCart({name: 'Content Writing Course', price: 3000})">Add to Cart</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Freelancing Mania. All rights reserved.</p>
+    </footer>
+    <div class="cart">
+        <button onclick="viewCart()">Cart (<span id="cart-count">0</span>)</button>
+    </div>
+    
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: PKR <span id="cart-total">0</span></p>
+            <button onclick="proceedToPayment()">Proceed to Payment</button>
+        </div>
+    </div>
+    
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePayment()">&times;</span>
+            <h2>Select Payment Method</h2>
+            <button onclick="selectPayment('JazzCash')">JazzCash</button>
+            <button onclick="selectPayment('Easypaisa')">Easypaisa</button>
+            <button onclick="selectPayment('Bank Transfer')">Bank Transfer</button>
+            <button onclick="selectPayment('Credit Card')">Credit Card</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

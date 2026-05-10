@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancing Mania - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Freelancing Mania</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="book.html">Book Store</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero fade-in">
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Attractive image of student with laptop earning dollars">
+                <div class="hero-overlay">
+                    <h2>Learn Freelancing</h2>
+                </div>
+            </div>
+            <div class="hero-text">
+                <p>Unlock your potential in freelancing with our comprehensive courses on Digital Marketing, YouTube Automation, Video Editing, and Content Writing. Tailored for learners in Pakistan, all content is in PKR.</p>
+            </div>
+        </section>
+        
+        <section class="recommendations fade-in">
+            <h2>Recommended for You</h2>
+            <p>Based on popular demand, here are our top recommendations:</p>
+            <ul>
+                <li>Start with Digital Marketing for a strong foundation in online business.</li>
+                <li>Combine Video Editing with YouTube Automation for content creators.</li>
+                <li>Enhance your skills with Content Writing to offer complete packages.</li>
+                <li>Don't forget our book "Freelancing Mastery" for in-depth knowledge.</li>
+            </ul>
+        </section>
+        
+        <div class="course-grid fade-in">
+            <div class="course-card">
+                <img src="https://picsum.photos/300/200?random=2" alt="AI-generated image of digital marketing tools">
+                <h3>Digital Marketing</h3>
+                <p>Master the art of online marketing with SEO, social media, and PPC strategies.</p>
+                <a href="courses.html#digital-marketing">Learn More</a>
+            </div>
+            <div class="course-card">
+                <img src="https://picsum.photos/300/200?random=3" alt="AI-generated image of YouTube automation">
+                <h3>YouTube Automation</h3>
+                <p>Automate your YouTube channel for passive income and growth.</p>
+                <a href="courses.html#youtube-automation">Learn More</a>
+            </div>
+            <div class="course-card">
+                <img src="https://picsum.photos/300/200?random=4" alt="AI-generated image of video editing">
+                <h3>Video Editing</h3>
+                <p>Create stunning videos with professional editing techniques.</p>
+                <a href="courses.html#video-editing">Learn More</a>
+            </div>
+            <div class="course-card">
+                <img src="https://picsum.photos/300/200?random=5" alt="AI-generated image of content writing">
+                <h3>Content Writing</h3>
+                <p>Write compelling content that engages and converts audiences.</p>
+                <a href="courses.html#content-writing">Learn More</a>
+            </div>
+        </div>
+        
+        <section class="testimonials fade-in">
+            <h2>What Our Students Say</h2>
+            <div class="testimonial">
+                <img src="https://picsum.photos/100/100?random=6" alt="AI-generated student avatar">
+                <p>"Freelancing Mania changed my career! The courses are practical and affordable."</p>
+                <cite>- Ahmed, Karachi</cite>
+            </div>
+            <div class="testimonial">
+                <img src="https://picsum.photos/100/100?random=7" alt="AI-generated student avatar">
+                <p>"Highly recommend the Video Editing course. Learned so much in weeks."</p>
+                <cite>- Fatima, Lahore</cite>
+            </div>
+            <div class="testimonial">
+                <img src="https://picsum.photos/100/100?random=9" alt="AI-generated student avatar">
+                <p>"The Digital Marketing course gave me the skills to start my own agency. Amazing content!"</p>
+                <cite>- Bilal, Islamabad</cite>
+            </div>
+            <div class="testimonial">
+                <img src="https://picsum.photos/100/100?random=10" alt="AI-generated student avatar">
+                <p>"YouTube Automation saved me hours every week. Now my channel grows on autopilot."</p>
+                <cite>- Ayesha, Peshawar</cite>
+            </div>
+            <div class="testimonial">
+                <img src="https://picsum.photos/100/100?random=11" alt="AI-generated student avatar">
+                <p>"Content Writing course improved my writing tenfold. Clients love my work now."</p>
+                <cite>- Hassan, Quetta</cite>
+            </div>
+        </section>
+        
+        <section class="why-choose-us fade-in">
+            <h2>Why Choose Freelancing Mania?</h2>
+            <ul>
+                <li>Expert instructors from Pakistan with real-world experience.</li>
+                <li>Affordable pricing in PKR, no hidden fees.</li>
+                <li>Lifetime access to course materials.</li>
+                <li>Community support and networking opportunities.</li>
+                <li>Focus on practical skills for immediate freelancing success.</li>
+            </ul>
+        </section>
+        
+        <div class="book-section fade-in">
+            <img src="https://picsum.photos/400/300?random=8" alt="AI-generated image of the book Freelancing Mastery">
+            <h3>Featured Book: Freelancing Mastery</h3>
+            <p>A comprehensive guide to starting and succeeding in freelancing. Packed with tips, case studies, and strategies tailored for the Pakistani market.</p>
+            <p>Price: PKR 1500</p>
+            <button onclick="addToCart({name: 'Freelancing Mastery', price: 1500})">Add to Cart</button>
+        </div>
+        
+        <section class="call-to-action fade-in">
+            <h2>Ready to Start Your Freelancing Journey?</h2>
+            <p>Join thousands of successful freelancers. Enroll today and transform your skills into income.</p>
+            <a href="courses.html"><button>Explore Courses</button></a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Freelancing Mania. All rights reserved.</p>
+    </footer>
+    <div class="cart">
+        <button onclick="viewCart()">Cart (<span id="cart-count">0</span>)</button>
+    </div>
+    
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: PKR <span id="cart-total">0</span></p>
+            <button onclick="proceedToPayment()">Proceed to Payment</button>
+        </div>
+    </div>
+    
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePayment()">&times;</span>
+            <h2>Select Payment Method</h2>
+            <button onclick="selectPayment('JazzCash')">JazzCash</button>
+            <button onclick="selectPayment('Easypaisa')">Easypaisa</button>
+            <button onclick="selectPayment('Bank Transfer')">Bank Transfer</button>
+            <button onclick="selectPayment('Credit Card')">Credit Card</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

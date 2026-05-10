@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancing Mania - Book Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Freelancing Mania</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="book.html">Book Store</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Book Store</h2>
+        <div class="book-section">
+            <h3>Freelancing Mastery</h3>
+            <p>A comprehensive guide to starting and succeeding in freelancing. Written by experts in Pakistan.</p>
+            <p>Price: PKR 1500</p>
+            <button onclick="addToCart({name: 'Freelancing Mastery', price: 1500})">Add to Cart</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Freelancing Mania. All rights reserved.</p>
+    </footer>
+    <div class="cart">
+        <button onclick="viewCart()">Cart (<span id="cart-count">0</span>)</button>
+    </div>
+    
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: PKR <span id="cart-total">0</span></p>
+            <button onclick="proceedToPayment()">Proceed to Payment</button>
+        </div>
+    </div>
+    
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePayment()">&times;</span>
+            <h2>Select Payment Method</h2>
+            <button onclick="selectPayment('JazzCash')">JazzCash</button>
+            <button onclick="selectPayment('Easypaisa')">Easypaisa</button>
+            <button onclick="selectPayment('Bank Transfer')">Bank Transfer</button>
+            <button onclick="selectPayment('Credit Card')">Credit Card</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
